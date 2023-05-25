@@ -1835,6 +1835,7 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
   min-height: 2.8125rem;
+  line-height: 110%;
 }
 
 .button_transparent {
@@ -2117,9 +2118,13 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 }
 
 .header__logo {
+  display: inline-block;
   position: relative;
   z-index: 100;
-  width: 7.5rem;
+  width: 6.25rem;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 6.25rem;
+          flex: 0 0 6.25rem;
 }
 
 .header__logo img {
@@ -3458,9 +3463,13 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   margin-bottom: 0.75rem;
 }
 
-.partners__content {
+.partners__body {
   margin: 0 auto;
   max-width: 65.9375rem;
+}
+
+.partners__content {
+  padding-bottom: 70.2369668246%;
   position: relative;
 }
 
@@ -3485,6 +3494,13 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 
 .partners__bg {
   max-width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .partner {
@@ -3516,9 +3532,19 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   left: 7%;
 }
 
+.partner_1 .partner__logo {
+  -webkit-animation: bounce ease 8s infinite;
+          animation: bounce ease 8s infinite;
+}
+
 .partner_2 {
   top: 42%;
   left: 12%;
+}
+
+.partner_2 .partner__logo {
+  -webkit-animation: bounce ease 6s infinite;
+          animation: bounce ease 6s infinite;
 }
 
 .partner_3 {
@@ -3526,9 +3552,19 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   left: 26%;
 }
 
+.partner_3 .partner__logo {
+  -webkit-animation: bounce ease 7s infinite;
+          animation: bounce ease 7s infinite;
+}
+
 .partner_4 {
   top: 10%;
   left: 50%;
+}
+
+.partner_4 .partner__logo {
+  -webkit-animation: bounce ease 6s infinite;
+          animation: bounce ease 6s infinite;
 }
 
 .partner_5 {
@@ -3536,14 +3572,73 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   left: 74%;
 }
 
+.partner_5 .partner__logo {
+  -webkit-animation: bounce ease 8s infinite;
+          animation: bounce ease 8s infinite;
+}
+
 .partner_6 {
   top: 42%;
   left: 88%;
 }
 
+.partner_6 .partner__logo {
+  -webkit-animation: bounce ease 6s infinite;
+          animation: bounce ease 6s infinite;
+}
+
 .partner_7 {
   top: 67%;
   left: 93%;
+}
+
+.partner_7 .partner__logo {
+  -webkit-animation: bounce ease 7s infinite;
+          animation: bounce ease 7s infinite;
+}
+
+@-webkit-keyframes bounce {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+
+  40% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+
+  70% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+
+  40% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+
+  70% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
 }
 
 .articles {
@@ -4450,7 +4545,7 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   }
 
   .card-service__link {
-    position: absolute;
+    position: absolute !important;
     z-index: 2;
     bottom: 0;
     left: 50%;
