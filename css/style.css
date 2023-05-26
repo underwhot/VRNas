@@ -3527,6 +3527,18 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   max-width: 100%;
 }
 
+.partner__logo picture {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .partner_1 {
   top: 67%;
   left: 7%;
