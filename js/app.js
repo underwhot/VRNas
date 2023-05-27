@@ -1023,6 +1023,7 @@
                         const spollersBlock = spollerClose.closest("[data-spollers]");
                         if (spollersBlock.classList.contains("_spoller-init")) {
                             const spollerSpeed = spollersBlock.dataset.spollersSpeed ? parseInt(spollersBlock.dataset.spollersSpeed) : 500;
+                            spollerClose.parentNode.classList.remove("_spoller-parent");
                             spollerClose.classList.remove("_spoller-active");
                             _slideUp(spollerClose.nextElementSibling, spollerSpeed);
                         }
@@ -3237,7 +3238,8 @@
             render
         });
         const tippy_esm = tippy;
-        modules_flsModules.tippy = tippy_esm("[data-tippy-content]", {
+        modules_flsModules.tippy = tippy_esm("a", {
+            content: "Link hasn't been added",
             trigger: "click",
             onShow(instance) {
                 setTimeout((() => {
@@ -7678,7 +7680,7 @@
             }));
         }));
         document.addEventListener("DOMContentLoaded", (function() {
-            const links = document.querySelectorAll("[data-tippy-content]");
+            const links = document.querySelectorAll("a");
             links.forEach((function(item) {
                 item.addEventListener("click", (function(e) {
                     e.preventDefault();
