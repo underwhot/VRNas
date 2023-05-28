@@ -5859,12 +5859,21 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
     width: 100%;
   }
 
+  .card-service__btn {
+    width: 100%;
+  }
+
   .choose__image {
     padding-bottom: 120.3094777563%;
   }
 
   .pricing__column:first-child {
     padding: 1.875rem 0.9375rem;
+  }
+
+  .partners__content::before {
+    -webkit-filter: blur(30px);
+            filter: blur(30px);
   }
 
   .slider-articles__slide {
